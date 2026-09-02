@@ -67,7 +67,7 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between min-h-[4.5rem] py-2">
         
-        <!-- ESQUINA SUPERIOR IZQUIERDA: LOGO + TITULO -->
+        <!-- LOGO + TITULO (SUPERIOR IZQUIERDA) -->
         <div class="flex items-center gap-4 sm:gap-6">
           <div class="flex-shrink-0 cursor-pointer">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 92" class="h-10 sm:h-12 w-auto select-none" style="filter: drop-shadow(0px 6px 12px rgba(22, 11, 44, 0.42));">
@@ -91,11 +91,11 @@
                 <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mr-1.5 animate-pulse"></span> Active
               </span>
             </div>
-            <p class="text-xs text-slate-400"></p>
+            <p class="text-xs text-slate-400">August 26, 2026 &bull; Run Rate: (MTD / 26) &times; 31 Days</p>
           </div>
         </div>
 
-        <!-- ESQUINA SUPERIOR DERECHA: FILTRO DE CAMPAÑA -->
+        <!-- FILTRO DE CAMPAÑA (SUPERIOR DERECHA) -->
         <div class="flex items-center gap-3">
           <div class="relative">
             <i data-lucide="filter" class="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-slate-400"></i>
@@ -117,7 +117,6 @@
 
     <!-- KPI CARDS -->
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
-      <!-- 1. Budget -->
       <div class="glass-card rounded-2xl p-5 border-l-4 border-l-indigo-500 transition">
         <div class="flex items-center justify-between text-slate-500 mb-2">
           <span class="text-xs font-bold uppercase tracking-wider text-slate-500">Amount Spent</span>
@@ -132,7 +131,6 @@
         </div>
       </div>
 
-      <!-- 2. Revenue -->
       <div class="glass-card rounded-2xl p-5 border-l-4 border-l-emerald-500 transition">
         <div class="flex items-center justify-between text-slate-500 mb-2">
           <span class="text-xs font-bold uppercase tracking-wider text-slate-500">Revenue</span>
@@ -147,7 +145,6 @@
         </div>
       </div>
 
-      <!-- 3. Profit -->
       <div class="glass-card rounded-2xl p-5 border-l-4 border-l-teal-500 transition">
         <div class="flex items-center justify-between text-slate-500 mb-2">
           <span class="text-xs font-bold uppercase tracking-wider text-slate-500">Net Profit</span>
@@ -162,7 +159,6 @@
         </div>
       </div>
 
-      <!-- 4. Sign ups -->
       <div class="glass-card rounded-2xl p-5 border-l-4 border-l-amber-500 transition">
         <div class="flex items-center justify-between text-slate-500 mb-2">
           <span class="text-xs font-bold uppercase tracking-wider text-slate-500">Registrations</span>
@@ -177,7 +173,6 @@
         </div>
       </div>
 
-      <!-- 5. Users / FTD -->
       <div class="glass-card rounded-2xl p-5 border-l-4 border-l-purple-500 transition">
         <div class="flex items-center justify-between text-slate-500 mb-2">
           <span class="text-xs font-bold uppercase tracking-wider text-slate-500">FTDs</span>
@@ -193,7 +188,7 @@
       </div>
     </div>
 
-    <!-- NUEVA TABLA CONSOLIDADA (SEGÚN TU IMAGEN DE REFERENCIA) -->
+    <!-- TABLA CONSOLIDADA: REVENUE AL LADO DE AMOUNT SPENT -->
     <div class="glass-card rounded-2xl overflow-hidden border border-slate-300 shadow-sm">
       <div class="overflow-x-auto">
         <table class="w-full text-xs text-left border-collapse">
@@ -206,53 +201,53 @@
             <tr class="bg-[#D9EAD3] border-b border-slate-300 text-slate-900 font-bold">
               <th class="py-2.5 px-4 border-r border-slate-300">Campaign</th>
               <th class="py-2.5 px-4 text-right border-r border-slate-300">Amount Spent</th>
+              <th class="py-2.5 px-4 text-right border-r border-slate-300">Revenue</th>
               <th class="py-2.5 px-4 text-right border-r border-slate-300">Registrations</th>
               <th class="py-2.5 px-4 text-right border-r border-slate-300">FTDs</th>
-              <th class="py-2.5 px-4 text-right border-r border-slate-300">Revenue</th>
-              <th class="py-2.5 px-4 text-right">ROI</th>
+              <th class="py-2.5 px-4 text-right">S2P</th>
             </tr>
           </thead>
           <tbody class="divide-y divide-slate-200 text-slate-800 bg-white">
             <tr class="hover:bg-slate-50 transition">
               <td class="py-2.5 px-4 font-semibold border-r border-slate-200">CR_NewFirstPurchase_07.09</td>
               <td class="py-2.5 px-4 text-right font-mono border-r border-slate-200">$327.86</td>
+              <td class="py-2.5 px-4 text-right font-mono border-r border-slate-200 font-bold text-emerald-700">$764.71</td>
               <td class="py-2.5 px-4 text-right font-mono border-r border-slate-200">7</td>
               <td class="py-2.5 px-4 text-right font-mono border-r border-slate-200">29</td>
-              <td class="py-2.5 px-4 text-right font-mono border-r border-slate-200 font-bold text-emerald-700">$764.71</td>
-              <td class="py-2.5 px-4 text-right font-mono font-bold text-emerald-600">133.24%</td>
+              <td class="py-2.5 px-4 text-right font-mono font-bold text-indigo-700">7:29</td>
             </tr>
             <tr class="hover:bg-slate-50 transition">
               <td class="py-2.5 px-4 font-semibold border-r border-slate-200">CoinsRoyale_Facebook_Web_FirstPurchase</td>
               <td class="py-2.5 px-4 text-right font-mono border-r border-slate-200">$320.80</td>
+              <td class="py-2.5 px-4 text-right font-mono border-r border-slate-200 font-bold text-slate-700">$312.78</td>
               <td class="py-2.5 px-4 text-right font-mono border-r border-slate-200">16</td>
               <td class="py-2.5 px-4 text-right font-mono border-r border-slate-200">22</td>
-              <td class="py-2.5 px-4 text-right font-mono border-r border-slate-200 font-bold text-slate-700">$312.78</td>
-              <td class="py-2.5 px-4 text-right font-mono font-bold text-rose-600">-2.50%</td>
+              <td class="py-2.5 px-4 text-right font-mono font-bold text-indigo-700">16:22</td>
             </tr>
             <tr class="hover:bg-slate-50 transition">
               <td class="py-2.5 px-4 font-semibold border-r border-slate-200">CoinsRoyale_Facebook_Web_Signup</td>
               <td class="py-2.5 px-4 text-right font-mono border-r border-slate-200">$94.99</td>
+              <td class="py-2.5 px-4 text-right font-mono border-r border-slate-200 text-slate-400">$0.00</td>
               <td class="py-2.5 px-4 text-right font-mono border-r border-slate-200">28</td>
               <td class="py-2.5 px-4 text-right font-mono border-r border-slate-200">0</td>
-              <td class="py-2.5 px-4 text-right font-mono border-r border-slate-200 text-slate-400">$0.00</td>
-              <td class="py-2.5 px-4 text-right font-mono font-bold text-rose-600">-100.00%</td>
+              <td class="py-2.5 px-4 text-right font-mono font-bold text-slate-500">28:0</td>
             </tr>
           </tbody>
           <tfoot>
             <tr class="bg-[#D9EAD3] border-t-2 border-slate-300 font-bold text-slate-900 text-xs">
               <td class="py-2.5 px-4 border-r border-slate-300">Total:</td>
               <td class="py-2.5 px-4 text-right font-mono border-r border-slate-300">$743.65</td>
-              <td class="py-2.5 px-4 text-right font-mono border-r border-slate-300">51</td>
-              <td class="py-2.5 px-4 text-right font-mono border-r border-slate-300">51</td>
               <td class="py-2.5 px-4 text-right font-mono border-r border-slate-300 font-bold text-emerald-800">$1,077.49</td>
-              <td class="py-2.5 px-4 text-right font-mono font-bold text-emerald-700">44.89%</td>
+              <td class="py-2.5 px-4 text-right font-mono border-r border-slate-300">51</td>
+              <td class="py-2.5 px-4 text-right font-mono border-r border-slate-300">51</td>
+              <td class="py-2.5 px-4 text-right font-mono font-bold text-emerald-800">51:51</td>
             </tr>
           </tfoot>
         </table>
       </div>
     </div>
 
-    <!-- COLORFUL CHARTS ROW 1 -->
+    <!-- CHARTS ROW 1 -->
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
       <div class="glass-card rounded-2xl p-6 lg:col-span-2 flex flex-col justify-between">
         <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-6">
@@ -313,7 +308,7 @@
       </div>
     </div>
 
-    <!-- COLORFUL CHARTS ROW 2 -->
+    <!-- CHARTS ROW 2 -->
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
       <div class="glass-card rounded-2xl p-6 lg:col-span-2 flex flex-col justify-between">
         <div class="flex items-center justify-between mb-4">
@@ -351,7 +346,7 @@
   <!-- FOOTER -->
   <footer class="bg-white border-t border-slate-200 mt-12 py-6 text-center text-xs text-slate-400">
     <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-2">
-      <span>CoinsRoyale Marketing Intelligence &bull; Dashboard sincronizado con reporte Meta</span>
+      <span>CoinsRoyale Marketing Intelligence &bull; Dashboard sincronizado</span>
       <span class="text-slate-500 font-medium">Auto-generated &bull; August 26, 2026</span>
     </div>
   </footer>
