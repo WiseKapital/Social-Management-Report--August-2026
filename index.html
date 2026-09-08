@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>WiseKapital - Marketing Performance Dashboard</title>
+  <title>CoinsRoyale - Marketing Performance Dashboard</title>
   
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -11,10 +11,10 @@
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <!-- Lucide Icons CDN -->
   <script src="https://unpkg.com/lucide@latest"></script>
-  <!-- Google Fonts: Poppins, Kalam, Inter & Outfit -->
+  <!-- Google Fonts: Inter & Outfit -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Kalam:wght@700&family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@500;600;700;800;900&display=swap" rel="stylesheet">
 
   <script>
     tailwind.config = {
@@ -23,8 +23,6 @@
           fontFamily: {
             sans: ['Inter', 'sans-serif'],
             display: ['Outfit', 'sans-serif'],
-            brand: ['Poppins', 'sans-serif'],
-            script: ['Kalam', 'cursive', 'sans-serif'],
           }
         }
       }
@@ -69,27 +67,18 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between min-h-[4.5rem] py-2">
         
-        <!-- LOGO WISEKAPITAL + TITULO (SUPERIOR IZQUIERDA) -->
+        <!-- LOGO + TITULO (SUPERIOR IZQUIERDA) -->
         <div class="flex items-center gap-4 sm:gap-6">
-          
-          <!-- LOGO WISEKAPITAL (100% CÓDIGO VECTORIAL SVG) -->
           <div class="flex-shrink-0 cursor-pointer">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 310 88" class="h-11 sm:h-13 w-auto select-none">
-              <!-- Texto Principal: WiseKapital -->
-              <text x="4" y="47" 
-                    font-family="'Poppins', 'Outfit', sans-serif" 
-                    font-weight="700" 
-                    font-size="47" 
-                    letter-spacing="-0.5px" 
-                    fill="#111827">WiseKapital</text>
-
-              <!-- Subtexto manuscrito: Who Dares Wins! -->
-              <text x="112" y="77" 
-                    font-family="'Kalam', cursive, sans-serif" 
-                    font-weight="700" 
-                    font-size="26" 
-                    letter-spacing="0.5px" 
-                    fill="#ECA51A">Who Dares Wins!</text>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 92" class="h-10 sm:h-12 w-auto select-none" style="filter: drop-shadow(0px 6px 12px rgba(22, 11, 44, 0.42));">
+              <g stroke="#160B2C" stroke-width="4.8" stroke-linecap="round" stroke-linejoin="round" fill="none">
+                <path d="M 21,50 L 13,24 L 28,37 L 36,15 L 48,31 L 53,8 L 58,31 L 70,15 L 78,37 L 93,24 L 85,50" />
+                <ellipse cx="53" cy="52" rx="32" ry="8.5" />
+                <path d="M 23, 60 C 18, 69 27, 78 53, 78 C 79, 78 88, 69 83, 60" />
+                <path d="M 28, 70 C 19, 77 24, 87 53, 87 C 80, 87 88, 79 85, 71" />
+              </g>
+              <text x="110" y="47" font-family="'Outfit', -apple-system, sans-serif" font-weight="900" font-size="44" letter-spacing="0.5" fill="#FFFFFF" stroke="#160B2C" stroke-width="5.5" stroke-linejoin="round" stroke-linecap="round" style="paint-order: stroke fill;">COINS ROYALE</text>
+              <text x="168" y="74" font-family="'Outfit', 'Inter', sans-serif" font-weight="600" font-size="19" letter-spacing="5.2" fill="#FFFFFF">SOCIAL CASINO</text>
             </svg>
           </div>
 
@@ -99,10 +88,10 @@
             <div class="flex items-center gap-2">
               <span class="font-display font-bold text-slate-800 text-sm tracking-tight">Social Report</span>
               <span class="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-50 text-emerald-700 border border-emerald-200">
-                <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mr-1.5 animate-pulse"></span> Active
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mr-1.5 animate-pulse"></span> 
               </span>
             </div>
-            <p class="text-xs text-slate-500 font-medium">September 01-02</p>
+
           </div>
         </div>
 
@@ -111,7 +100,10 @@
           <div class="relative">
             <i data-lucide="filter" class="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-slate-400"></i>
             <select id="campaignFilter" onchange="filterData()" class="pl-9 pr-8 py-2 text-xs font-medium text-slate-700 bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:bg-white transition cursor-pointer appearance-none shadow-sm">
-              <option value="all">All Campaigns</option>
+              <option value="all">All Campaigns (3)</option>
+              <option value="CR_NewFirstPurchase_07.09">CR_NewFirstPurchase_07.09</option>
+              <option value="CoinsRoyale_Facebook_Web_FirstPurchase">CoinsRoyale_Facebook_Web_FirstPurchase</option>
+              <option value="CoinsRoyale_Facebook_Web_Signup">CoinsRoyale_Facebook_Web_Signup</option>
             </select>
           </div>
         </div>
@@ -125,7 +117,6 @@
 
     <!-- KPI CARDS -->
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
-      <!-- 1. Amount Spent -->
       <div class="glass-card rounded-2xl p-5 border-l-4 border-l-indigo-500 transition">
         <div class="flex items-center justify-between text-slate-500 mb-2">
           <span class="text-xs font-bold uppercase tracking-wider text-slate-500">Amount Spent</span>
@@ -133,14 +124,13 @@
             <i data-lucide="wallet" class="w-3.5 h-3.5"></i>
           </div>
         </div>
-        <div class="text-2xl sm:text-3xl font-extrabold font-display text-black tracking-tight" id="kpiBudget">$0</div>
+        <div class="text-2xl sm:text-3xl font-extrabold font-display text-black tracking-tight" id="kpiBudget">$744</div>
         <div class="flex items-center gap-1.5 flex-wrap mt-2">
           <span class="text-[11px] font-extrabold text-black bg-slate-100 border border-slate-300 px-2 py-0.5 rounded-md">KPI: $1,100</span>
-          <span id="rrBudget" class="text-[11px] font-extrabold px-2 py-0.5 rounded-md border bg-slate-50 text-slate-600 border-slate-200">RR: $0</span>
+          <span id="rrBudget" class="text-[11px] font-extrabold px-2 py-0.5 rounded-md border bg-rose-50 text-rose-600 border-rose-200">RR: $744</span>
         </div>
       </div>
 
-      <!-- 2. Revenue -->
       <div class="glass-card rounded-2xl p-5 border-l-4 border-l-emerald-500 transition">
         <div class="flex items-center justify-between text-slate-500 mb-2">
           <span class="text-xs font-bold uppercase tracking-wider text-slate-500">Revenue</span>
@@ -148,14 +138,13 @@
             <i data-lucide="dollar-sign" class="w-3.5 h-3.5"></i>
           </div>
         </div>
-        <div class="text-2xl sm:text-3xl font-extrabold font-display text-black tracking-tight" id="kpiRevenue">$0</div>
+        <div class="text-2xl sm:text-3xl font-extrabold font-display text-black tracking-tight" id="kpiRevenue">$1,077</div>
         <div class="flex items-center gap-1.5 flex-wrap mt-2">
           <span class="text-[11px] font-extrabold text-black bg-slate-100 border border-slate-300 px-2 py-0.5 rounded-md">KPI: $3,300</span>
-          <span id="rrRevenue" class="text-[11px] font-extrabold px-2 py-0.5 rounded-md border bg-slate-50 text-slate-600 border-slate-200">RR: $0</span>
+          <span id="rrRevenue" class="text-[11px] font-extrabold px-2 py-0.5 rounded-md border bg-rose-50 text-rose-600 border-rose-200">RR: $1,077</span>
         </div>
       </div>
 
-      <!-- 3. Net Profit -->
       <div class="glass-card rounded-2xl p-5 border-l-4 border-l-teal-500 transition">
         <div class="flex items-center justify-between text-slate-500 mb-2">
           <span class="text-xs font-bold uppercase tracking-wider text-slate-500">Net Profit</span>
@@ -163,14 +152,13 @@
             <i data-lucide="trending-up" class="w-3.5 h-3.5"></i>
           </div>
         </div>
-        <div class="text-2xl sm:text-3xl font-extrabold font-display text-black tracking-tight" id="kpiProfit">$0</div>
+        <div class="text-2xl sm:text-3xl font-extrabold font-display text-black tracking-tight" id="kpiProfit">+$334</div>
         <div class="flex items-center gap-1.5 flex-wrap mt-2">
           <span class="text-[11px] font-extrabold text-black bg-slate-100 border border-slate-300 px-2 py-0.5 rounded-md">KPI: $2,200</span>
-          <span id="rrProfit" class="text-[11px] font-extrabold px-2 py-0.5 rounded-md border bg-slate-50 text-slate-600 border-slate-200">RR: $0</span>
+          <span id="rrProfit" class="text-[11px] font-extrabold px-2 py-0.5 rounded-md border bg-rose-50 text-rose-600 border-rose-200">RR: +$334</span>
         </div>
       </div>
 
-      <!-- 4. Registrations (KPI: 250) -->
       <div class="glass-card rounded-2xl p-5 border-l-4 border-l-amber-500 transition">
         <div class="flex items-center justify-between text-slate-500 mb-2">
           <span class="text-xs font-bold uppercase tracking-wider text-slate-500">Registrations</span>
@@ -178,14 +166,13 @@
             <i data-lucide="user-plus" class="w-3.5 h-3.5"></i>
           </div>
         </div>
-        <div class="text-2xl sm:text-3xl font-extrabold font-display text-black tracking-tight" id="kpiSignups">0</div>
+        <div class="text-2xl sm:text-3xl font-extrabold font-display text-black tracking-tight" id="kpiSignups">51</div>
         <div class="flex items-center gap-1.5 flex-wrap mt-2">
-          <span class="text-[11px] font-extrabold text-black bg-slate-100 border border-slate-300 px-2 py-0.5 rounded-md">KPI: 250</span>
-          <span id="rrSignups" class="text-[11px] font-extrabold px-2 py-0.5 rounded-md border bg-slate-50 text-slate-600 border-slate-200">RR: 0</span>
+          <span class="text-[11px] font-extrabold text-black bg-slate-100 border border-slate-300 px-2 py-0.5 rounded-md">KPI: 200</span>
+          <span id="rrSignups" class="text-[11px] font-extrabold px-2 py-0.5 rounded-md border bg-rose-50 text-rose-600 border-rose-200">RR: 51</span>
         </div>
       </div>
 
-      <!-- 5. FTDs (KPI: 20) -->
       <div class="glass-card rounded-2xl p-5 border-l-4 border-l-purple-500 transition">
         <div class="flex items-center justify-between text-slate-500 mb-2">
           <span class="text-xs font-bold uppercase tracking-wider text-slate-500">FTDs</span>
@@ -193,22 +180,22 @@
             <i data-lucide="badge-check" class="w-3.5 h-3.5"></i>
           </div>
         </div>
-        <div class="text-2xl sm:text-3xl font-extrabold font-display text-black tracking-tight" id="kpiFtd">0</div>
+        <div class="text-2xl sm:text-3xl font-extrabold font-display text-black tracking-tight" id="kpiFtd">51</div>
         <div class="flex items-center gap-1.5 flex-wrap mt-2">
-          <span class="text-[11px] font-extrabold text-black bg-slate-100 border border-slate-300 px-2 py-0.5 rounded-md">KPI: 20</span>
-          <span id="rrFtd" class="text-[11px] font-extrabold px-2 py-0.5 rounded-md border bg-slate-50 text-slate-600 border-slate-200">RR: 0</span>
+          <span class="text-[11px] font-extrabold text-black bg-slate-100 border border-slate-300 px-2 py-0.5 rounded-md">KPI: 15</span>
+          <span id="rrFtd" class="text-[11px] font-extrabold px-2 py-0.5 rounded-md border bg-emerald-50 text-emerald-600 border-emerald-200">RR: 51</span>
         </div>
       </div>
     </div>
 
-    <!-- TABLA CONSOLIDADA -->
+    <!-- TABLA CONSOLIDADA: REVENUE AL LADO DE AMOUNT SPENT -->
     <div class="glass-card rounded-2xl overflow-hidden border border-slate-300 shadow-sm">
       <div class="overflow-x-auto">
         <table class="w-full text-xs text-left border-collapse">
           <thead>
             <tr class="bg-[#E2F0D9] border-b-2 border-slate-300">
               <th colspan="6" class="py-2.5 px-4 text-center font-bold text-[#276A3C] text-sm tracking-wide">
-                September 01-02 Performance Summary (Campaign Consolidated)
+                August Performance Summary (Campaign Consolidated)
               </th>
             </tr>
             <tr class="bg-[#D9EAD3] border-b border-slate-300 text-slate-900 font-bold">
@@ -220,65 +207,48 @@
               <th class="py-2.5 px-4 text-right">S2P</th>
             </tr>
           </thead>
-          <tbody id="summaryTableBody" class="divide-y divide-slate-200 text-slate-800 bg-white">
-            <tr>
-              <td colspan="6" class="py-8 text-center text-slate-400 font-medium italic">
-                
-              </td>
+          <tbody class="divide-y divide-slate-200 text-slate-800 bg-white">
+            <tr class="hover:bg-slate-50 transition">
+              <td class="py-2.5 px-4 font-semibold border-r border-slate-200">CR_NewFirstPurchase_07.09</td>
+              <td class="py-2.5 px-4 text-right font-mono border-r border-slate-200">$327.86</td>
+              <td class="py-2.5 px-4 text-right font-mono border-r border-slate-200 font-bold text-emerald-700">$764.71</td>
+              <td class="py-2.5 px-4 text-right font-mono border-r border-slate-200">7</td>
+              <td class="py-2.5 px-4 text-right font-mono border-r border-slate-200">29</td>
+              <td class="py-2.5 px-4 text-right font-mono font-bold text-indigo-700">7:29</td>
+            </tr>
+            <tr class="hover:bg-slate-50 transition">
+              <td class="py-2.5 px-4 font-semibold border-r border-slate-200">CoinsRoyale_Facebook_Web_FirstPurchase</td>
+              <td class="py-2.5 px-4 text-right font-mono border-r border-slate-200">$320.80</td>
+              <td class="py-2.5 px-4 text-right font-mono border-r border-slate-200 font-bold text-slate-700">$312.78</td>
+              <td class="py-2.5 px-4 text-right font-mono border-r border-slate-200">16</td>
+              <td class="py-2.5 px-4 text-right font-mono border-r border-slate-200">22</td>
+              <td class="py-2.5 px-4 text-right font-mono font-bold text-indigo-700">16:22</td>
+            </tr>
+            <tr class="hover:bg-slate-50 transition">
+              <td class="py-2.5 px-4 font-semibold border-r border-slate-200">CoinsRoyale_Facebook_Web_Signup</td>
+              <td class="py-2.5 px-4 text-right font-mono border-r border-slate-200">$94.99</td>
+              <td class="py-2.5 px-4 text-right font-mono border-r border-slate-200 text-slate-400">$0.00</td>
+              <td class="py-2.5 px-4 text-right font-mono border-r border-slate-200">28</td>
+              <td class="py-2.5 px-4 text-right font-mono border-r border-slate-200">0</td>
+              <td class="py-2.5 px-4 text-right font-mono font-bold text-slate-500">28:0</td>
             </tr>
           </tbody>
           <tfoot>
             <tr class="bg-[#D9EAD3] border-t-2 border-slate-300 font-bold text-slate-900 text-xs">
               <td class="py-2.5 px-4 border-r border-slate-300">Total:</td>
-              <td class="py-2.5 px-4 text-right font-mono border-r border-slate-300" id="footSummarySpent">$0.00</td>
-              <td class="py-2.5 px-4 text-right font-mono border-r border-slate-300 font-bold" id="footSummaryRevenue">$0.00</td>
-              <td class="py-2.5 px-4 text-right font-mono border-r border-slate-300" id="footSummarySignups">0</td>
-              <td class="py-2.5 px-4 text-right font-mono border-r border-slate-300" id="footSummaryFtd">0</td>
-              <td class="py-2.5 px-4 text-right font-mono font-bold" id="footSummaryS2P">-:-</td>
+              <td class="py-2.5 px-4 text-right font-mono border-r border-slate-300">$743.65</td>
+              <td class="py-2.5 px-4 text-right font-mono border-r border-slate-300 font-bold text-emerald-800">$1,077.49</td>
+              <td class="py-2.5 px-4 text-right font-mono border-r border-slate-300">51</td>
+              <td class="py-2.5 px-4 text-right font-mono border-r border-slate-300">51</td>
+              <td class="py-2.5 px-4 text-right font-mono font-bold text-emerald-800">51:51</td>
             </tr>
           </tfoot>
         </table>
       </div>
     </div>
 
-    <!-- GRÁFICOS FILA 1: FINANCIAL BREAKDOWN & REGISTRATIONS VS FTDS (PRIMERO) -->
+    <!-- CHARTS ROW 1 -->
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-      <!-- 1. Campaign Financial Breakdown (Izquierda, 2 cols) -->
-      <div class="glass-card rounded-2xl p-6 lg:col-span-2 flex flex-col justify-between">
-        <div class="flex items-center justify-between mb-4">
-          <div>
-            <h2 class="text-base font-bold font-display text-slate-900 flex items-center gap-2">
-              <span class="w-2.5 h-2.5 rounded-full bg-purple-500 inline-block"></span>
-              Campaign Financial Breakdown
-            </h2>
-            <p class="text-xs text-slate-500 mt-0.5">Amount spent, Revenue and Net Profit by Campaign</p>
-          </div>
-        </div>
-        <div class="relative h-64 sm:h-72 w-full">
-          <canvas id="campaignBarChart"></canvas>
-        </div>
-      </div>
-
-      <!-- 2. Registrations vs. FTDs (Derecha, 1 col) -->
-      <div class="glass-card rounded-2xl p-6 flex flex-col justify-between">
-        <div>
-          <div class="flex items-center justify-between mb-1">
-            <h2 class="text-base font-bold font-display text-slate-900">Registrations vs. FTDs</h2>
-            <div class="w-7 h-7 rounded-lg bg-amber-50 text-amber-600 flex items-center justify-center">
-              <i data-lucide="users" class="w-4 h-4"></i>
-            </div>
-          </div>
-          <p class="text-xs text-slate-500 mb-4">Acquisition volume vs conversion</p>
-        </div>
-        <div class="relative h-64 w-full">
-          <canvas id="conversionBarChart"></canvas>
-        </div>
-      </div>
-    </div>
-
-    <!-- GRÁFICOS FILA 2: DAILY AMOUNT SPENT VS REVENUE & REVENUE BY CAMPAIGN -->
-    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-      <!-- 3. Daily Amount Spent vs Conversion Value (Izquierda, 2 cols) -->
       <div class="glass-card rounded-2xl p-6 lg:col-span-2 flex flex-col justify-between">
         <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-6">
           <div>
@@ -302,7 +272,6 @@
         </div>
       </div>
 
-      <!-- 4. Revenue by Campaign Doughnut (Derecha, 1 col) -->
       <div class="glass-card rounded-2xl p-6 flex flex-col justify-between">
         <div>
           <div class="flex items-center justify-between mb-1">
@@ -311,18 +280,75 @@
               <i data-lucide="pie-chart" class="w-4 h-4"></i>
             </div>
           </div>
-          <p class="text-xs text-slate-500 mb-4">Share of total revenue</p>
+          <p class="text-xs text-slate-500 mb-4">Share of total $1,077 revenue</p>
         </div>
         <div class="relative h-56 flex items-center justify-center">
           <canvas id="campaignPieChart"></canvas>
         </div>
-        <div class="mt-4 pt-4 border-t border-slate-100 text-xs text-center text-slate-400">
-       
+        <div class="mt-4 pt-4 border-t border-slate-100 space-y-2 text-xs">
+          <div class="flex items-center justify-between">
+            <span class="flex items-center gap-2 text-slate-600 truncate max-w-[170px]">
+              <span class="w-2.5 h-2.5 rounded-full bg-indigo-500"></span> CR_NewFirstPurchase_07.09
+            </span>
+            <span class="font-bold text-slate-800">$765 (71%)</span>
+          </div>
+          <div class="flex items-center justify-between">
+            <span class="flex items-center gap-2 text-slate-600 truncate max-w-[170px]">
+              <span class="w-2.5 h-2.5 rounded-full bg-cyan-500"></span> Facebook_Web_FirstPurchase
+            </span>
+            <span class="font-bold text-slate-800">$313 (29%)</span>
+          </div>
+          <div class="flex items-center justify-between">
+            <span class="flex items-center gap-2 text-slate-600 truncate max-w-[170px]">
+              <span class="w-2.5 h-2.5 rounded-full bg-slate-300"></span> Facebook_Web_Signup
+            </span>
+            <span class="font-bold text-slate-400">$0 (0%)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CHARTS ROW 2 -->
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+      <div class="glass-card rounded-2xl p-6 lg:col-span-2 flex flex-col justify-between">
+        <div class="flex items-center justify-between mb-4">
+          <div>
+            <h2 class="text-base font-bold font-display text-slate-900 flex items-center gap-2">
+              <span class="w-2.5 h-2.5 rounded-full bg-purple-500 inline-block"></span>
+              Campaign Financial Breakdown
+            </h2>
+            <p class="text-xs text-slate-500 mt-0.5">Amount spent, Revenue and Net Profit by Campaign</p>
+          </div>
+        </div>
+        <div class="relative h-64 sm:h-72 w-full">
+          <canvas id="campaignBarChart"></canvas>
+        </div>
+      </div>
+
+      <div class="glass-card rounded-2xl p-6 flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between mb-1">
+            <h2 class="text-base font-bold font-display text-slate-900">Registrations vs. FTDs</h2>
+            <div class="w-7 h-7 rounded-lg bg-amber-50 text-amber-600 flex items-center justify-center">
+              <i data-lucide="users" class="w-4 h-4"></i>
+            </div>
+          </div>
+          <p class="text-xs text-slate-500 mb-4">Acquisition volume vs conversion</p>
+        </div>
+        <div class="relative h-64 w-full">
+          <canvas id="conversionBarChart"></canvas>
         </div>
       </div>
     </div>
 
   </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-white border-t border-slate-200 mt-12 py-6 text-center text-xs text-slate-400">
+    <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-2">
+
+    </div>
+  </footer>
 
   <!-- JAVASCRIPT LOGIC -->
   <script>
@@ -330,14 +356,61 @@
       budget: 1100,
       revenue: 3300,
       profit: 2200,
-      signups: 250,
-      users: 20
+      signups: 200,
+      users: 15
     };
 
-    const DAYS_ELAPSED = 2;
-    const TOTAL_DAYS_IN_MONTH = 30;
+    const DAYS_ELAPSED = 26;
+    const TOTAL_DAYS_IN_MONTH = 31;
 
-    const rawData = [];
+    const rawData = [
+      {
+        campaign: "CR_NewFirstPurchase_07.09",
+        status: "completed",
+        level: "campaign",
+        all: { budget: 327.86, revenue: 764.71, signups: 7, ftd: 29 },
+        days: [
+          { date: "2026-08-16", budget: 58.20, revenue: 0.00, signups: "", ftd: 0 },
+          { date: "2026-08-12", budget: 57.66, revenue: 59.98, signups: "", ftd: 2 },
+          { date: "2026-08-13", budget: 56.58, revenue: 149.95, signups: 1, ftd: 5 },
+          { date: "2026-08-14", budget: 40.51, revenue: 9.99, signups: 1, ftd: 1 },
+          { date: "2026-08-05", budget: 30.53, revenue: 9.99, signups: "", ftd: 1 },
+          { date: "2026-08-06", budget: 29.95, revenue: 219.95, signups: 1, ftd: 5 },
+          { date: "2026-08-07", budget: 26.86, revenue: 69.97, signups: 4, ftd: 3 },
+          { date: "2026-08-15", budget: 20.20, revenue: 84.94, signups: "", ftd: 6 },
+          { date: "2026-08-08", budget: 7.37, revenue: 9.99, signups: "", ftd: 1 }
+        ]
+      },
+      {
+        campaign: "CoinsRoyale_Facebook_Web_FirstPurchase",
+        status: "completed",
+        level: "campaign",
+        all: { budget: 320.80, revenue: 312.78, signups: 16, ftd: 22 },
+        days: [
+          { date: "2026-08-12", budget: 55.76, revenue: 32.96, signups: 2, ftd: 4 },
+          { date: "2026-08-13", budget: 54.36, revenue: 9.99, signups: 2, ftd: 1 },
+          { date: "2026-08-16", budget: 50.28, revenue: 29.98, signups: 4, ftd: 2 },
+          { date: "2026-08-14", budget: 43.36, revenue: 79.97, signups: 2, ftd: 3 },
+          { date: "2026-08-06", budget: 37.93, revenue: 59.96, signups: 1, ftd: 4 },
+          { date: "2026-08-05", budget: 32.20, revenue: 9.99, signups: 2, ftd: 1 },
+          { date: "2026-08-15", budget: 21.96, revenue: 19.98, signups: 1, ftd: 2 },
+          { date: "2026-08-07", budget: 21.51, revenue: 29.98, signups: 1, ftd: 2 },
+          { date: "2026-08-08", budget: 3.44, revenue: 29.98, signups: 1, ftd: 2 }
+        ]
+      },
+      {
+        campaign: "CoinsRoyale_Facebook_Web_Signup",
+        status: "inactive",
+        level: "campaign",
+        all: { budget: 94.99, revenue: 0.00, signups: 28, ftd: 0 },
+        days: [
+          { date: "2026-08-06", budget: 36.94, revenue: 0.00, signups: 11, ftd: 0 },
+          { date: "2026-08-05", budget: 35.77, revenue: 0.00, signups: 8, ftd: 0 },
+          { date: "2026-08-07", budget: 17.18, revenue: 0.00, signups: 6, ftd: 0 },
+          { date: "2026-08-08", budget: 5.10, revenue: 0.00, signups: 3, ftd: 0 }
+        ]
+      }
+    ];
 
     const fmtMoney = (n) => "$" + Math.round(Number(n)).toLocaleString('en-US');
 
@@ -348,54 +421,25 @@
         ? ((isProfit && rounded > 0 ? '+$' : '$') + Math.abs(rounded).toLocaleString('en-US'))
         : rounded.toLocaleString('en-US');
       
-      const badgeClass = isAbove && rounded > 0
+      const badgeClass = isAbove 
         ? 'bg-emerald-50 text-emerald-600 border-emerald-200' 
-        : 'bg-slate-50 text-slate-600 border-slate-200';
+        : 'bg-rose-50 text-rose-600 border-rose-200';
       
       return `<span id="${elementId}" class="text-[11px] font-extrabold px-2 py-0.5 rounded-md border ${badgeClass}">RR: ${formattedRR}</span>`;
     }
 
     function initCharts() {
-      // 1. Campaign Financial Breakdown
-      new Chart(document.getElementById('campaignBarChart').getContext('2d'), {
-        type: 'bar',
-        data: {
-          labels: [],
-          datasets: [
-            { label: 'Amount spent ($)', data: [], backgroundColor: 'rgba(99, 102, 241, 0.85)', borderRadius: 6 },
-            { label: 'Revenue ($)', data: [], backgroundColor: 'rgba(16, 185, 129, 0.85)', borderRadius: 6 },
-            { label: 'Profit ($)', data: [], backgroundColor: 'rgba(20, 184, 166, 0.85)', borderRadius: 6 }
-          ]
-        },
-        options: {
-          responsive: true,
-          maintainAspectRatio: false,
-          plugins: { legend: { position: 'top' } },
-          scales: { y: { ticks: { callback: (v) => '$' + v } } }
-        }
-      });
+      const dates = ["2026-08-05", "2026-08-06", "2026-08-07", "2026-08-08", "2026-08-12", "2026-08-13", "2026-08-14", "2026-08-15", "2026-08-16"];
+      const dailyBudgets = [98.50, 104.82, 65.55, 15.91, 113.42, 110.94, 83.87, 42.16, 108.48];
+      const dailyRevenues = [19.98, 279.91, 99.95, 39.97, 92.94, 159.94, 89.96, 104.92, 29.98];
 
-      // 2. Registrations vs FTDs
-      new Chart(document.getElementById('conversionBarChart').getContext('2d'), {
-        type: 'bar',
-        data: {
-          labels: [],
-          datasets: [
-            { label: 'Registrations', data: [], backgroundColor: 'rgba(245, 158, 11, 0.85)', borderRadius: 6 },
-            { label: 'FTDs', data: [], backgroundColor: 'rgba(139, 92, 246, 0.85)', borderRadius: 6 }
-          ]
-        },
-        options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'top' } } }
-      });
-
-      // 3. Daily Amount Spent vs Conversion Value
       new Chart(document.getElementById('dailyBarChart').getContext('2d'), {
         type: 'bar',
         data: {
-          labels: [],
+          labels: dates.map(d => d.replace('2026-', '')),
           datasets: [
-            { label: 'Amount spent ($)', data: [], backgroundColor: 'rgba(99, 102, 241, 0.85)', borderRadius: 6 },
-            { label: 'Revenue ($)', data: [], backgroundColor: 'rgba(16, 185, 129, 0.85)', borderRadius: 6 }
+            { label: 'Amount spent ($)', data: dailyBudgets, backgroundColor: 'rgba(99, 102, 241, 0.85)', borderRadius: 6, barPercentage: 0.65 },
+            { label: 'Revenue ($)', data: dailyRevenues, backgroundColor: 'rgba(16, 185, 129, 0.85)', borderRadius: 6, barPercentage: 0.65 }
           ]
         },
         options: {
@@ -403,32 +447,71 @@
           maintainAspectRatio: false,
           plugins: { legend: { display: false } },
           scales: {
-            x: { grid: { display: false } },
+            x: { grid: { display: false }, ticks: { font: { size: 11 } } },
             y: { grid: { color: '#F1F5F9' }, ticks: { callback: (v) => '$' + v } }
           }
         }
       });
 
-      // 4. Revenue by Campaign Doughnut
       new Chart(document.getElementById('campaignPieChart').getContext('2d'), {
         type: 'doughnut',
         data: {
-          labels: [],
-          datasets: [{ data: [], backgroundColor: ['#6366F1', '#06B6D4', '#E2E8F0'] }]
+          labels: ['CR_NewFirstPurchase_07.09', 'CoinsRoyale_FB_FirstPurchase', 'CoinsRoyale_FB_Signup'],
+          datasets: [{ data: [764.71, 312.78, 0], backgroundColor: ['#6366F1', '#06B6D4', '#E2E8F0'], borderWidth: 2, borderColor: '#FFFFFF' }]
         },
         options: { responsive: true, maintainAspectRatio: false, cutout: '72%', plugins: { legend: { display: false } } }
+      });
+
+      new Chart(document.getElementById('campaignBarChart').getContext('2d'), {
+        type: 'bar',
+        data: {
+          labels: ['CR_NewFirstPurchase_07.09', 'CoinsRoyale_FB_FirstPurchase', 'CoinsRoyale_FB_Signup'],
+          datasets: [
+            { label: 'Amount spent ($)', data: [327.86, 320.80, 94.99], backgroundColor: 'rgba(99, 102, 241, 0.85)', borderRadius: 6 },
+            { label: 'Revenue ($)', data: [764.71, 312.78, 0], backgroundColor: 'rgba(16, 185, 129, 0.85)', borderRadius: 6 },
+            { label: 'Profit ($)', data: [436.85, -8.02, -94.99], backgroundColor: 'rgba(20, 184, 166, 0.85)', borderRadius: 6 }
+          ]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: { legend: { position: 'top', labels: { boxWidth: 12 } } },
+          scales: { y: { ticks: { callback: (v) => '$' + v } } }
+        }
+      });
+
+      new Chart(document.getElementById('conversionBarChart').getContext('2d'), {
+        type: 'bar',
+        data: {
+          labels: ['CR_NewFirstPurchase_07.09', 'CoinsRoyale_FB_FirstPurchase', 'CoinsRoyale_FB_Signup'],
+          datasets: [
+            { label: 'Registrations', data: [7, 16, 28], backgroundColor: 'rgba(245, 158, 11, 0.85)', borderRadius: 6 },
+            { label: 'FTDs', data: [29, 22, 0], backgroundColor: 'rgba(139, 92, 246, 0.85)', borderRadius: 6 }
+          ]
+        },
+        options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'top', labels: { boxWidth: 12 } } } }
       });
     }
 
     function filterData() {
+      const selected = document.getElementById('campaignFilter').value;
       let totBudget = 0, totRev = 0, totSignups = 0, totFtd = 0;
+      const filtered = selected === 'all' ? rawData : rawData.filter(c => c.campaign === selected);
+
+      filtered.forEach(c => {
+        totBudget += c.all.budget;
+        totRev += c.all.revenue;
+        totSignups += parseFloat(c.all.signups) || 0;
+        totFtd += parseFloat(c.all.ftd) || 0;
+      });
+
       const totalProfit = totRev - totBudget;
 
       document.getElementById('kpiBudget').textContent = fmtMoney(totBudget);
       document.getElementById('kpiRevenue').textContent = fmtMoney(totRev);
-      document.getElementById('kpiProfit').textContent = fmtMoney(totalProfit);
-      document.getElementById('kpiSignups').textContent = totSignups;
-      document.getElementById('kpiFtd').textContent = totFtd;
+      document.getElementById('kpiProfit').textContent = (totalProfit >= 0 ? '+$' : '-$') + Math.abs(Math.round(totalProfit)).toLocaleString('en-US');
+      document.getElementById('kpiSignups').textContent = Math.round(totSignups);
+      document.getElementById('kpiFtd').textContent = Math.round(totFtd);
 
       const rrBud = (totBudget / DAYS_ELAPSED) * TOTAL_DAYS_IN_MONTH;
       const rrRev = (totRev / DAYS_ELAPSED) * TOTAL_DAYS_IN_MONTH;
@@ -446,7 +529,6 @@
     document.addEventListener("DOMContentLoaded", () => {
       lucide.createIcons();
       initCharts();
-      filterData();
     });
   </script>
 </body>
